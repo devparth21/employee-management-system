@@ -1,0 +1,242 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #0f0f0f;
+    color: #ffffff;
+    min-height: 100vh;
+}
+
+/* HERO SECTION */
+.hero {
+    background: linear-gradient(135deg, #0f0f0f 0%, #1a1a2e 50%, #16213e 100%);
+    padding: 60px 40px;
+    text-align: center;
+    border-bottom: 1px solid #ffffff15;
+    animation: fadeInDown 1s ease;
+}
+
+@keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.hero h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    background: linear-gradient(90deg, #4facfe, #00f2fe);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    color: #888;
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+}
+
+.badges {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.badge {
+    background: #ffffff10;
+    border: 1px solid #ffffff20;
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    color: #4facfe;
+    animation: fadeIn 1.5s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* DASHBOARD */
+.dashboard {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 30px;
+    animation: fadeInUp 1s ease;
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* CARD */
+.card {
+    background: #1a1a1a;
+    border: 1px solid #ffffff15;
+    border-radius: 12px;
+    padding: 24px;
+}
+
+.card h2 {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: #4facfe;
+}
+
+/* FORM */
+.form-group {
+    margin-bottom: 16px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 0.85rem;
+    color: #888;
+    margin-bottom: 6px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px 14px;
+    background: #0f0f0f;
+    border: 1px solid #ffffff20;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 0.95rem;
+    outline: none;
+    transition: border 0.3s;
+}
+
+.form-group input:focus {
+    border-color: #4facfe;
+}
+
+.btn-add {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(90deg, #4facfe, #00f2fe);
+    border: none;
+    border-radius: 8px;
+    color: #000;
+    font-weight: 700;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: opacity 0.3s;
+}
+
+.btn-add:hover {
+    opacity: 0.85;
+}
+
+/* TABLE */
+.table-card {
+    background: #1a1a1a;
+    border: 1px solid #ffffff15;
+    border-radius: 12px;
+    padding: 24px;
+    overflow-x: auto;
+}
+
+.table-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.table-header h2 {
+    font-size: 1.2rem;
+    color: #4facfe;
+}
+
+.employee-count {
+    background: #4facfe20;
+    color: #4facfe;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th {
+    text-align: left;
+    padding: 12px;
+    font-size: 0.8rem;
+    color: #888;
+    text-transform: uppercase;
+    border-bottom: 1px solid #ffffff10;
+}
+
+td {
+    padding: 14px 12px;
+    font-size: 0.95rem;
+    border-bottom: 1px solid #ffffff08;
+}
+
+tr:hover td {
+    background: #ffffff05;
+}
+
+.dept-badge {
+    background: #4facfe15;
+    color: #4facfe;
+    padding: 3px 10px;
+    border-radius: 12px;
+    font-size: 0.8rem;
+}
+
+.btn-delete {
+    background: #ff4d4d15;
+    color: #ff4d4d;
+    border: 1px solid #ff4d4d30;
+    padding: 5px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    transition: background 0.3s;
+}
+
+.btn-delete:hover {
+    background: #ff4d4d30;
+}
+
+.empty-state {
+    text-align: center;
+    padding: 40px;
+    color: #444;
+}
+
+.message {
+    padding: 10px 16px;
+    border-radius: 8px;
+    margin-top: 12px;
+    font-size: 0.9rem;
+    display: none;
+}
+
+.message.success {
+    background: #00f2fe15;
+    color: #00f2fe;
+    border: 1px solid #00f2fe30;
+    display: block;
+}
+
+.message.error {
+    background: #ff4d4d15;
+    color: #ff4d4d;
+    border: 1px solid #ff4d4d30;
+    display: block;
+}
